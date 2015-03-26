@@ -18,4 +18,4 @@ User \
 STM32L1xx_StdPeriph_Driver/src \
 GNU \
 CMSIS/src \
-
+/

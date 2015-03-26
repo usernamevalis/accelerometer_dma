@@ -14,6 +14,9 @@ RM := rm -rf
 -include CMSIS/src/subdir.mk
 -include subdir.mk
 -include objects.mk
+-include mini-printf.c
+-include mini-printf.h
+
 
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)

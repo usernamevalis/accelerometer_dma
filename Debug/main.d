@@ -29,7 +29,8 @@ main.d: ../main.c \
  /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/stm32l1xx_tim.h \
  /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/stm32l1xx_usart.h \
  /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/stm32l1xx_wwdg.h \
- /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/misc.h
+ /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/misc.h \
+ ../mini-printf.h
 
 /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/CMSIS/ST/STM32L1xx/Include/stm32l1xx.h:
 
@@ -92,3 +93,5 @@ main.d: ../main.c \
 /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/stm32l1xx_wwdg.h:
 
 /Users/nathan/Development/stm32/STM32L1xx_StdPeriph_Template/STM32L1xx_StdPeriph_Driver/inc/misc.h:
+
+../mini-printf.h:
