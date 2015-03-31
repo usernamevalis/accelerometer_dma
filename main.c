@@ -76,6 +76,7 @@ void usart_write(uint8_t ch);
 uint8_t usart_read(void);
 uint8_t usart_available(void);
 void usart_print( char *msg );
+void delay(int a);
 
 
 /* Private functions ---------------------------------------------------------*/
@@ -107,9 +108,27 @@ int main(void)
 
     // } 
 
-	  	  int p = ADC_ConvertedValue[0];
-	      int p2 = ADC_ConvertedValue[1];
-	      int p3 = ADC_ConvertedValue[2];
+
+	  //FILTERING? KALMAN FILTER?
+
+	      char strDisp[20];
+
+	      usart_print("X axis: ");
+	      mini_snprintf( strDisp, 5,  "%d", ADC_ConvertedValue[0]);
+	      usart_print(strDisp);
+
+	      usart_print("	y axis: ");
+	      	      mini_snprintf( strDisp, 5,  "%d", ADC_ConvertedValue[1]);
+	      	      usart_print(strDisp);
+
+	      usart_print("	z axis: ");
+	      	      mini_snprintf( strDisp, 5,  "%d", ADC_ConvertedValue[2]);
+	      	      usart_print(strDisp);
+
+	      	      usart_print( "\r\n" );
+
+	     delay(100);
+
 
 
     if ( usart_available() ) // data available
@@ -126,8 +145,6 @@ int main(void)
 
         usart_print("after");
                usart_print( "\r\n" );
-
-
       }
 
   }
@@ -278,4 +295,13 @@ void usart_print( char *msg )
     usart_write( (uint8_t)*msg++ );
 }
 
+void delay( int a )
+{
+	volatile int i, j;
+
+	for ( i = 0; i < a; i++ )
+	{
+		j++;
+	}
+}
 

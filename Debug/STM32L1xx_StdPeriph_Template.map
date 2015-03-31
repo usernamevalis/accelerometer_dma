@@ -3557,8 +3557,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0xbd ./main.o
  .debug_macro   0x0000000000000000       0x16 ./main.o
  .debug_macro   0x0000000000000000      0x14a ./main.o
- .data          0x0000000000000000        0x0 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
- .bss           0x0000000000000000        0x0 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+ .data          0x0000000000000000        0x0 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
+ .bss           0x0000000000000000        0x0 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
  .text          0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
  .data          0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
  .bss           0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
@@ -3654,7 +3654,7 @@ LOAD ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_wwdg.o
 LOAD ./GNU/startup_stm32l1xx_md.o
 LOAD ./CMSIS/src/system_stm32l1xx.o
 LOAD ./main.o
-LOAD /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+LOAD /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
 START GROUP
 LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a
 LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a
@@ -3672,11 +3672,11 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x19d0
+.text           0x000000000800010c     0x1a9c
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800010c       0x5c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text          0x0000000008000168      0x3d4 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+ .text          0x0000000008000168      0x3d4 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
                 0x00000000080002f0                mini_vsnprintf
                 0x000000000800050c                mini_snprintf
  *(.text*)
@@ -3834,109 +3834,111 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
                 0x0000000008001398                SystemInit
  .text.SetSysClock
                 0x0000000008001400      0x120 ./CMSIS/src/system_stm32l1xx.o
- .text.main     0x0000000008001520       0xa0 ./main.o
+ .text.main     0x0000000008001520      0x11c ./main.o
                 0x0000000008001520                main
  .text.initUart
-                0x00000000080015c0       0xe0 ./main.o
-                0x00000000080015c0                initUart
+                0x000000000800163c       0xe0 ./main.o
+                0x000000000800163c                initUart
  .text.ADC_DMA_Config
-                0x00000000080016a0      0x184 ./main.o
-                0x00000000080016a0                ADC_DMA_Config
+                0x000000000800171c      0x184 ./main.o
+                0x000000000800171c                ADC_DMA_Config
  .text.usart_write
-                0x0000000008001824       0x38 ./main.o
-                0x0000000008001824                usart_write
+                0x00000000080018a0       0x38 ./main.o
+                0x00000000080018a0                usart_write
  .text.usart_read
-                0x000000000800185c       0x30 ./main.o
-                0x000000000800185c                usart_read
+                0x00000000080018d8       0x30 ./main.o
+                0x00000000080018d8                usart_read
  .text.usart_available
-                0x000000000800188c       0x24 ./main.o
-                0x000000000800188c                usart_available
+                0x0000000008001908       0x24 ./main.o
+                0x0000000008001908                usart_available
  .text.usart_print
-                0x00000000080018b0       0x44 ./main.o
-                0x00000000080018b0                usart_print
+                0x000000000800192c       0x44 ./main.o
+                0x000000000800192c                usart_print
+ .text.delay    0x0000000008001970       0x2c ./main.o
+                0x0000000008001970                delay
  .text.__libc_init_array
-                0x00000000080018f4       0x50 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
-                0x00000000080018f4                __libc_init_array
- .text.strlen   0x0000000008001944       0x5c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
-                0x0000000008001944                strlen
+                0x000000000800199c       0x50 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+                0x000000000800199c                __libc_init_array
+ .text.strlen   0x00000000080019ec       0x5c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                0x00000000080019ec                strlen
  .text.startup.register_fini
-                0x00000000080019a0       0x14 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x00000000080019b4        0xc /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
-                0x00000000080019b4                atexit
+                0x0000000008001a48       0x14 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008001a5c        0xc /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                0x0000000008001a5c                atexit
  .text.__libc_fini_array
-                0x00000000080019c0       0x2c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
-                0x00000000080019c0                __libc_fini_array
+                0x0000000008001a68       0x2c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+                0x0000000008001a68                __libc_fini_array
  .text.__register_exitproc
-                0x00000000080019ec       0xa4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
-                0x00000000080019ec                __register_exitproc
+                0x0000000008001a94       0xa4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+                0x0000000008001a94                __register_exitproc
  *(.rodata)
- .rodata        0x0000000008001a90       0x2c ./main.o
+ .rodata        0x0000000008001b38       0x50 ./main.o
  *(.rodata*)
  .rodata.str1.4
-                0x0000000008001abc        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x0000000008001b88        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x0000000008001ac0        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
-                0x0000000008001ac0                _global_impure_ptr
+                0x0000000008001b8c        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x0000000008001b8c                _global_impure_ptr
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008001ac4        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x0000000008001b90        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(.init)
- .init          0x0000000008001ac4        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x0000000008001ac4                _init
- .init          0x0000000008001ac8        0x8 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+ .init          0x0000000008001b90        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000000008001b90                _init
+ .init          0x0000000008001b94        0x8 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
  *(.fini)
- .fini          0x0000000008001ad0        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x0000000008001ad0                _fini
- .fini          0x0000000008001ad4        0x8 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x0000000008001adc                . = ALIGN (0x4)
-                0x0000000008001adc                _etext = .
+ .fini          0x0000000008001b9c        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000000008001b9c                _fini
+ .fini          0x0000000008001ba0        0x8 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000000008001ba8                . = ALIGN (0x4)
+                0x0000000008001ba8                _etext = .
 
-.vfp11_veneer   0x0000000008001adc        0x0
+.vfp11_veneer   0x0000000008001ba8        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000008001adc        0x0
+.v4_bx          0x0000000008001ba8        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000008001adc        0x0
+.iplt           0x0000000008001ba8        0x0
  .iplt          0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.rel.dyn        0x0000000008001adc        0x0
+.rel.dyn        0x0000000008001ba8        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008001adc        0x0
-                0x0000000008001adc                __exidx_start = .
+.ARM            0x0000000008001ba8        0x0
+                0x0000000008001ba8                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008001adc                __exidx_end = .
+                0x0000000008001ba8                __exidx_end = .
 
-.preinit_array  0x0000000008001adc        0x0
-                0x0000000008001adc                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000008001ba8        0x0
+                0x0000000008001ba8                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008001adc                PROVIDE (__preinit_array_end, .)
+                0x0000000008001ba8                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008001adc        0x8
-                0x0000000008001adc                PROVIDE (__init_array_start, .)
+.init_array     0x0000000008001ba8        0x8
+                0x0000000008001ba8                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x0000000008001adc        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                0x0000000008001ba8        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008001ae0        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
-                0x0000000008001ae4                PROVIDE (__init_array_end, .)
+ .init_array    0x0000000008001bac        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+                0x0000000008001bb0                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008001ae4        0x4
-                0x0000000008001ae4                PROVIDE (__fini_array_start, .)
+.fini_array     0x0000000008001bb0        0x4
+                0x0000000008001bb0                PROVIDE (__fini_array_start, .)
  *(.fini_array*)
- .fini_array    0x0000000008001ae4        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x0000000008001bb0        0x4 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x0000000008001ae8                PROVIDE (__fini_array_end, .)
-                0x0000000008001ae8                _sidata = .
+                0x0000000008001bb4                PROVIDE (__fini_array_end, .)
+                0x0000000008001bb4                _sidata = .
 
-.data           0x0000000020000000      0x448 load address 0x0000000008001ae8
+.data           0x0000000020000000      0x448 load address 0x0000000008001bb4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3951,14 +3953,14 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
                 0x0000000020000448                . = ALIGN (0x4)
                 0x0000000020000448                _edata = .
 
-.jcr            0x0000000020000448        0x0 load address 0x0000000008001f30
+.jcr            0x0000000020000448        0x0 load address 0x0000000008001ffc
  .jcr           0x0000000020000448        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.igot.plt       0x0000000020000448        0x0 load address 0x0000000008001f30
+.igot.plt       0x0000000020000448        0x0 load address 0x0000000008001ffc
  .igot.plt      0x0000000000000000        0x0 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
                 0x0000000020000448                . = ALIGN (0x4)
 
-.bss            0x0000000020000448       0x88 load address 0x0000000008001f30
+.bss            0x0000000020000448       0x88 load address 0x0000000008001ffc
                 0x0000000020000448                _sbss = .
                 0x0000000020000448                __bss_start__ = _sbss
  *(.bss)
@@ -3979,7 +3981,7 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
                 0x00000000200004d0                PROVIDE (_end, _ebss)
 
 ._user_heap_stack
-                0x00000000200004d0       0x80 load address 0x0000000008001fb8
+                0x00000000200004d0       0x80 load address 0x0000000008002084
                 0x00000000200004d0                . = ALIGN (0x4)
                 0x00000000200004d0                . = (. + _Min_Heap_Size)
                 0x0000000020000550                . = (. + _Min_Stack_Size)
@@ -4023,7 +4025,7 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
  .ARM.attributes
                 0x00000000000001d0       0x33 ./main.o
  .ARM.attributes
-                0x0000000000000203       0x33 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+                0x0000000000000203       0x33 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
  .ARM.attributes
                 0x0000000000000236       0x2d /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
  .ARM.attributes
@@ -4042,7 +4044,7 @@ LOAD /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/
                 0x0000000000000371       0x1d /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
 OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x3b1b
+.debug_info     0x0000000000000000     0x3b48
  .debug_info    0x0000000000000000      0x13e ./User/stm32l1xx_it.o
  .debug_info    0x000000000000013e      0xcb1 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
  .debug_info    0x0000000000000def      0x47b ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.o
@@ -4051,9 +4053,9 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_info    0x00000000000022cc      0x9ca ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .debug_info    0x0000000000002c96       0x7a ./GNU/startup_stm32l1xx_md.o
  .debug_info    0x0000000000002d10      0x54e ./CMSIS/src/system_stm32l1xx.o
- .debug_info    0x000000000000325e      0x8bd ./main.o
+ .debug_info    0x000000000000325e      0x8ea ./main.o
 
-.debug_abbrev   0x0000000000000000      0xb61
+.debug_abbrev   0x0000000000000000      0xb52
  .debug_abbrev  0x0000000000000000       0x6a ./User/stm32l1xx_it.o
  .debug_abbrev  0x000000000000006a      0x183 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
  .debug_abbrev  0x00000000000001ed      0x15a ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.o
@@ -4062,9 +4064,9 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_abbrev  0x00000000000006d7      0x15a ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .debug_abbrev  0x0000000000000831       0x12 ./GNU/startup_stm32l1xx_md.o
  .debug_abbrev  0x0000000000000843      0x14a ./CMSIS/src/system_stm32l1xx.o
- .debug_abbrev  0x000000000000098d      0x1d4 ./main.o
+ .debug_abbrev  0x000000000000098d      0x1c5 ./main.o
 
-.debug_aranges  0x0000000000000000      0x590
+.debug_aranges  0x0000000000000000      0x598
  .debug_aranges
                 0x0000000000000000       0x60 ./User/stm32l1xx_it.o
  .debug_aranges
@@ -4082,9 +4084,9 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000510       0x30 ./CMSIS/src/system_stm32l1xx.o
  .debug_aranges
-                0x0000000000000540       0x50 ./main.o
+                0x0000000000000540       0x58 ./main.o
 
-.debug_ranges   0x0000000000000000      0x508
+.debug_ranges   0x0000000000000000      0x510
  .debug_ranges  0x0000000000000000       0x50 ./User/stm32l1xx_it.o
  .debug_ranges  0x0000000000000050      0x138 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
  .debug_ranges  0x0000000000000188       0x60 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.o
@@ -4093,7 +4095,7 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_ranges  0x0000000000000398       0xf0 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .debug_ranges  0x0000000000000488       0x20 ./GNU/startup_stm32l1xx_md.o
  .debug_ranges  0x00000000000004a8       0x20 ./CMSIS/src/system_stm32l1xx.o
- .debug_ranges  0x00000000000004c8       0x40 ./main.o
+ .debug_ranges  0x00000000000004c8       0x48 ./main.o
 
 .debug_macro    0x0000000000000000     0xdfaa
  .debug_macro   0x0000000000000000      0x26d ./User/stm32l1xx_it.o
@@ -4168,7 +4170,7 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_macro   0x000000000000df42       0x52 ./main.o
  .debug_macro   0x000000000000df94       0x16 ./main.o
 
-.debug_line     0x0000000000000000     0x39ae
+.debug_line     0x0000000000000000     0x39d9
  .debug_line    0x0000000000000000      0x685 ./User/stm32l1xx_it.o
  .debug_line    0x0000000000000685      0x8c8 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
  .debug_line    0x0000000000000f4d      0x654 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.o
@@ -4177,9 +4179,9 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_line    0x000000000000249f      0x7d3 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .debug_line    0x0000000000002c72       0x7a ./GNU/startup_stm32l1xx_md.o
  .debug_line    0x0000000000002cec      0x5c1 ./CMSIS/src/system_stm32l1xx.o
- .debug_line    0x00000000000032ad      0x701 ./main.o
+ .debug_line    0x00000000000032ad      0x72c ./main.o
 
-.debug_str      0x0000000000000000    0x5255d
+.debug_str      0x0000000000000000    0x52563
  .debug_str     0x0000000000000000    0x4fec1 ./User/stm32l1xx_it.o
                                       0x50099 (size before relaxing)
  .debug_str     0x000000000004fec1      0x9bc ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
@@ -4194,8 +4196,8 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
                                       0x4d7cc (size before relaxing)
  .debug_str     0x0000000000052191      0x11c ./CMSIS/src/system_stm32l1xx.o
                                       0x4d377 (size before relaxing)
- .debug_str     0x00000000000522ad      0x2b0 ./main.o
-                                      0x50797 (size before relaxing)
+ .debug_str     0x00000000000522ad      0x2b6 ./main.o
+                                      0x5079d (size before relaxing)
 
 .comment        0x0000000000000000       0x70
  .comment       0x0000000000000000       0x70 ./User/stm32l1xx_it.o
@@ -4207,9 +4209,9 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .comment       0x0000000000000000       0x71 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .comment       0x0000000000000000       0x71 ./CMSIS/src/system_stm32l1xx.o
  .comment       0x0000000000000000       0x71 ./main.o
- .comment       0x0000000000000000       0x71 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+ .comment       0x0000000000000000       0x71 /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
 
-.debug_frame    0x0000000000000000     0x1810
+.debug_frame    0x0000000000000000     0x1838
  .debug_frame   0x0000000000000000      0x110 ./User/stm32l1xx_it.o
  .debug_frame   0x0000000000000110      0x5fc ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_adc.o
  .debug_frame   0x000000000000070c      0x1c8 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.o
@@ -4217,13 +4219,13 @@ OUTPUT(STM32L1xx_StdPeriph_Template.elf elf32-littlearm)
  .debug_frame   0x0000000000000b10      0x5e4 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_rcc.o
  .debug_frame   0x00000000000010f4      0x490 ./STM32L1xx_StdPeriph_Driver/src/stm32l1xx_usart.o
  .debug_frame   0x0000000000001584       0x7c ./CMSIS/src/system_stm32l1xx.o
- .debug_frame   0x0000000000001600       0xec ./main.o
- .debug_frame   0x00000000000016ec       0x2c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
- .debug_frame   0x0000000000001718       0x20 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
- .debug_frame   0x0000000000001738       0x50 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000001788       0x20 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
- .debug_frame   0x00000000000017a8       0x34 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
- .debug_frame   0x00000000000017dc       0x34 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000001600      0x114 ./main.o
+ .debug_frame   0x0000000000001714       0x2c /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000001740       0x20 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000001760       0x50 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000017b0       0x20 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000000000017d0       0x34 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000001804       0x34 /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
 
 Cross Reference Table
 
@@ -4934,6 +4936,7 @@ _start                                            /Users/nathan/Development/stm3
 atexit                                            /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
                                                   /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
                                                   /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+delay                                             ./main.o
 exit                                              /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
                                                   /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 free                                              /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
@@ -4946,9 +4949,9 @@ main                                              ./main.o
 malloc                                            /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
 memset                                            /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
                                                   /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
-mini_snprintf                                     /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+mini_snprintf                                     /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
                                                   ./main.o
-mini_vsnprintf                                    /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclgAJHR.o
+mini_vsnprintf                                    /var/folders/jk/1d1jxt_x2n55y2hcfrnxzm0c0000gp/T//cclc4Vqg.o
 software_init_hook                                /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 strlen                                            /Users/nathan/Development/stm32/gcc-arm/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
                                                   ./main.o
